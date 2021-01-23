@@ -29,7 +29,7 @@
 				}
 			],
 			"image": "linuxserver/airsonic:latest",
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/airsonic-logo.png",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/main/Images/airsonic-logo.png?token=ANVETBB4QWJ2QTU7Y2VQNITABS2YG",
 			"name": "airsonic",
 			"platform": "linux",
 			"ports": [
@@ -44,19 +44,15 @@
 					"container": "/music"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Airsonic/Playlists",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/playlists",
 					"container": "/playlists"
 				},
 				{
-					"bind": "/portainer/Podcasts",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/podcasts",
 					"container": "/podcasts"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Airsonic/Media",
-					"container": "/media"
-				},
-				{
-					"bind": "/portainer/Files/AppData/Config/Airsonic/",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/airsonic/",
 					"container": "/config"
 				}
 			]
