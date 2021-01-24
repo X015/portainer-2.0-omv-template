@@ -18,6 +18,6 @@ Add the following Shares to your OMV
 
 # Screenshots:
 
-
+![Screenshot](/Images/Screenshot/screenshot.png)
 
 Source: https://github.com/SelfhostedPro/selfhosted_templates/tree/OMV5
