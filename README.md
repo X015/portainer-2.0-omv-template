@@ -1,10 +1,10 @@
 # portainer-2.0-omv-template
 Portainer 2.0 Application Template
 
-#Instructions
+# Instructions
 
 You should be using OpenMediaVault as your OS on your NAS.  
-Add the following Shares to your OMV
+Add the following Shares to your OMV  
 
 - appdata
 - books
@@ -15,6 +15,9 @@ Add the following Shares to your OMV
 - playlists
 - podcasts
 - tv
+
+# Screenshots:
+
 
 
 Source: https://github.com/SelfhostedPro/selfhosted_templates/tree/OMV5
