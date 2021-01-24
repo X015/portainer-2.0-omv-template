@@ -71,7 +71,7 @@
 				}
 			],
 			"image": "authelia/authelia:latest",
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/authelia.png",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/authelia.png?token=ANVETBD2TYAM5CIMUJ225LLABS4YI",
 			"name": "authelia",
 			"note": "Requires a configuration.yml file in order to work. Documentation is Available \u003ca href='https://docs.authelia.com/deployment/deployment-ha'\u003ehere\u003c/a\u003e.",
 			"platform": "linux",
@@ -83,7 +83,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Authelia",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/authelia",
 					"container": "/etc/authelia/"
 				}
 			]
@@ -111,7 +111,7 @@
 				}
 			],
 			"image": "linuxserver/bazarr:latest",
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/bazarr.png",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/bazarr-logo.png?token=ANVETBHCEGWU7KFFIYQIAD3ABS47I",
 			"name": "bazarr",
 			"platform": "linux",
 			"ports": [
@@ -122,15 +122,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Bazarr",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/bazarr",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/TV",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/tv",
 					"container": "/tv"
 				},
 				{
-					"bind": "/portainer/Movies",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/movies",
 					"container": "/movies"
 				}
 			]
@@ -153,7 +153,7 @@
 				}
 			],
 			"image": "linuxserver/beets:latest",
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/beets-icon.png",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/beets-logo.png?token=ANVETBD6QU2EKLG7HMIKVB3ABS5LC",
 			"name": "beets",
 			"platform": "linux",
 			"ports": [
@@ -164,15 +164,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Beets",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/beets",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/Downloads",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/downloads",
 					"container": "/downloads"
 				},
 				{
-					"bind": "/portainer/Music",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/music",
 					"container": "/music"
 				}
 			]
