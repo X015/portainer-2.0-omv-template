@@ -7,9 +7,13 @@ You should be using OpenMediaVault as your OS on your NAS.
 Add the following Shares to your OMV
 
 - appdata
+- books
+- comics
 - downloads
 - movies
 - music
+- playlists
+- podcasts
 - tv
 
 
