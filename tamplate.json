@@ -71,7 +71,7 @@
 				}
 			],
 			"image": "authelia/authelia:latest",
-			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/authelia.png",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/authelia-logo.png",
 			"name": "authelia",
 			"note": "Requires a configuration.yml file in order to work. Documentation is Available \u003ca href='https://docs.authelia.com/deployment/deployment-ha'\u003ehere\u003c/a\u003e.",
 			"platform": "linux",
