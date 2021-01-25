@@ -3356,7 +3356,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/TheLounge",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/thelounge",
 					"container": "/config"
 				}
 			]
@@ -3379,7 +3379,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/TiddlyWiki",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/tiddlywiki",
 					"container": "/var/lib/tiddlywiki"
 				}
 			]
@@ -3414,11 +3414,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Transmission",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/transmission",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/Files/Downloads",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/downloads",
 					"container": "/downloads"
 				},
 				{
@@ -3479,7 +3479,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Downloads",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/downloads",
 					"container": "/data"
 				},
 				{
@@ -3517,7 +3517,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/tt-rss",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/tt-rss",
 					"container": "/config"
 				}
 			]
@@ -3541,7 +3541,7 @@
 				}
 			],
 			"image": "linuxserver/tvheadend:latest",
-			"logo": "http://i.imgur.com/zGSUAT4.png",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/tvheadend-logo.png",
 			"name": "tvheadend",
 			"platform": "linux",
 			"ports": [
@@ -3553,7 +3553,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/TVHeadend",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/tvheadend",
 					"container": "/config"
 				},
 				{
@@ -3597,12 +3597,15 @@
 			"type": 1,
 			"volumes": [
 				{
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/books",
 					"container": "/books"
 				},
 				{
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/comics",
 					"container": "/comics"
 				},
 				{
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/ubooquity",
 					"container": "/config"
 				}
 			]
@@ -3644,7 +3647,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Unifi",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/unifi-controller",
 					"container": "/config"
 				}
 			]
@@ -3697,11 +3700,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/WebGrabPlus",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/webgrabplus",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/Files/AppData/WebGrabPlus",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/webgrabplus/data",
 					"container": "/data"
 				}
 			]
@@ -3724,7 +3727,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Whoogle",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/whoogle",
 					"container": "/config"
 				}
 			]
@@ -3747,11 +3750,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Wikijs",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/wikijs",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Config/Wikijs/data",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/wikijs/data",
 					"container": "/data"
 				}
 			]
@@ -3774,23 +3777,23 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/YTDLM",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/youtube-dl",
 					"container": "/app/appdata"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Youtube/Video",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/downloads/youtube-dl/video",
 					"container": "/app/video"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Youtube/Subscriptions",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/downloads/youtube-dl/subscriptions",
 					"container": "/app/subscriptions"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Youtube/Users",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/downloads/youtube-dl/users",
 					"container": "/app/users"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Youtube/Audio",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/downloads/youtube-dl/audio",
 					"container": "/app/audio"
 				}
 			]
@@ -3842,11 +3845,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/UnifFiVideo/Recordings/",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/unifivideo/recordings/",
 					"container": "/recordings"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Config/UniFiVideo/",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/unifivideo/",
 					"container": "/config"
 				}
 			]
@@ -3858,7 +3861,7 @@
 			],
 			"description": "A web interface for managing docker containers with an emphasis on templating to provide 1 click deployments. Think of it like a decentralized app store for servers that anyone can make packages for.",
 			"image": "selfhostedpro/yacht:latest",
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/Yacht/master/readme_media/Yacht_logo_1_dark.png",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/Yacht_logo_1_dark.png",
 			"name": "yacht",
 			"platform": "linux",
 			"ports": [
@@ -3907,7 +3910,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/ZNC",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/znc",
 					"container": "/config"
 				}
 			]
@@ -3934,7 +3937,8 @@
 					"default": "MULLVAD",
 					"description": "see https://github.com/sgtsquiggs/docker-deluge-openvpn",
 					"label": "OPENVPN_PROVIDER",
-					"name": "OPENVPN_PROVIDER"
+					"name": "OPENVPN_PROVIDER",
+					"image": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/deluge-openvpn.png"
 				},
 				{
 					"label": "OPENVPN_USERNAME",
@@ -3960,11 +3964,11 @@
 					"container": "/etc/localtime"
 				},
 				{
-					"bind": "/portainer/Downloads",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/downloads",
 					"container": "/downloads"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Config/DelugeOpenVPN/config",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/delugeopenvpn/config",
 					"container": "/config"
 				}
 			]
