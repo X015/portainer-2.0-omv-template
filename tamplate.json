@@ -1807,7 +1807,7 @@
 				}
 			],
 			"image": "linuxserver/codiad:latest",
-			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/codiad-icon.png",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/codiad.png",
 			"name": "codiad",
 			"platform": "linux",
 			"ports": [
@@ -2738,7 +2738,7 @@
 					"name": "WIREGUARD"
 				}
 			],
-			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/pritunl/Images/pritunl.png",
+			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/pritunl.png",
 			"name": "pritunl",
 			"note": "Documentation on this containier can be found here: \u003ca href=https://hub.docker.com/r/goofball222/pritunl\u003ehttps://hub.docker.com/r/goofball222/pritunl\u003c/a\u003e",
 			"platform": "linux",
@@ -3059,7 +3059,7 @@
 			],
 			"description": "Shiori is a simple bookmarks manager written in Go language. Intended as a simple clone of Pocket. You can use it as command line application or as web application.",
 			"image": "radhifadlillah/shiori:latest",
-			"logo": "hhttps://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/shiori-logo.png",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/shiori-logo.png",
 			"name": "shiori",
 			"platform": "linux",
 			"ports": [
@@ -3911,64 +3911,6 @@
 			"volumes": [
 				{
 					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/znc",
-					"container": "/config"
-				}
-			]
-		},
-		{
-			"categories": [
-				"Other",
-				"VPN",
-				"Tools"
-			],
-			"description": "This container contains OpenVPN and Deluge with a configuration where Deluge is running only when OpenVPN has an active tunnel. It bundles configuration files for many popular VPN providers to make the setup easier.",
-			"env": [
-				{
-					"default": "1001",
-					"label": "PUID",
-					"name": "PUID"
-				},
-				{
-					"default": "1001",
-					"label": "PGID",
-					"name": "PUID"
-				},
-				{
-					"default": "MULLVAD",
-					"description": "see https://github.com/sgtsquiggs/docker-deluge-openvpn",
-					"label": "OPENVPN_PROVIDER",
-					"name": "OPENVPN_PROVIDER",
-					"image": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/deluge-openvpn.png"
-				},
-				{
-					"label": "OPENVPN_USERNAME",
-					"name": "OPENVPN_USERNAME"
-				},
-				{
-					"label": "OPENVPN_PASSWORD",
-					"name": "OPENVPN_PASSWORD"
-				}
-			],
-			"image": "sgtsquiggs/deluge-openvpn:latest",
-			"name": "deluge-openvpn",
-			"platform": "linux",
-			"ports": [
-				"8112:8112/tcp"
-			],
-			"restart_policy": "unless-stopped",
-			"title": "Deluge openvpn",
-			"type": 1,
-			"volumes": [
-				{
-					"bind": "/etc/localtime",
-					"container": "/etc/localtime"
-				},
-				{
-					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/downloads",
-					"container": "/downloads"
-				},
-				{
-					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/delugeopenvpn/config",
 					"container": "/config"
 				}
 			]
