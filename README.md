@@ -32,7 +32,7 @@ Search for "/srv/dev-disk-by-id-md-name-Nexus-0/tv replace with path to your tv 
 
 1. Login to your OMV Dashboard
 2. Go to Access Right Managment on the left side and click on Shared Folder
-3. Make a right Click on the Absolute Path and click Inspec Element and Copy the path -> Search, Replace and Repeat with the next Shared Folder
+3. Make a right Click on the Absolute Path and click Inspect Element and Copy the path -> Search, Replace and Repeat with the next Shared Folder
    If you cant see any Absolute Paths the Mouse Over the Name Column and press on the Arrow pointing down and select Absolute Path.
    
    
