@@ -184,7 +184,7 @@
 			],
 			"description": "This is a Bitwarden server API implementation written in Rust compatible with upstream Bitwarden clients*, perfect for self-hosted deployment where running the official resource-heavy service might not be ideal..",
 			"image": "bitwardenrs/server:latest",
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/bitwarden.png",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/bitwarden.png",
 			"name": "bitwardenrs",
 			"note": "This project is not associated with the Bitwarden project nor 8bit Solutions LLC.",
 			"platform": "linux",
@@ -196,7 +196,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Bitwarden-rs",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/bitwarden-rs",
 					"container": "/config"
 				}
 			]
@@ -225,7 +225,7 @@
 				}
 			],
 			"image": "linuxserver/booksonic:latest",
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/booksonic.png",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/booksonic.png",
 			"name": "booksonic",
 			"platform": "linux",
 			"ports": [
@@ -236,15 +236,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Books",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/books",
 					"container": "/books"
 				},
 				{
-					"bind": "/portainer/Files/Podcasts",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/podcasts",
 					"container": "/podcast"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Config/Booksonic",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/booksonic",
 					"container": "/config"
 				}
 			]
@@ -256,7 +256,7 @@
 			],
 			"description": "Embystat is a personal web server that can calculate all kinds of statistics from your (local) Emby server. Just install this on your server and let him calculate all kinds of fun stuff.",
 			"image": "linuxserver/embystat:latest",
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/embystat.png",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/embystat.png",
 			"name": "embystat",
 			"note": "Access the ui at your-ip:6555. Follow the setup wizard on initial install. Then configure the required services.",
 			"platform": "linux",
@@ -268,7 +268,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/EmbyStat",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/embystat",
 					"container": "/config"
 				}
 			]
@@ -291,7 +291,7 @@
 				}
 			],
 			"image": "linuxserver/headphones:latest",
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/headphones-icon.png",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/headphones-banner.png",
 			"name": "headphones",
 			"platform": "linux",
 			"ports": [
@@ -302,15 +302,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Headphones",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/headphones",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/Downloads",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/downloads",
 					"container": "/Downloads"
 				},
 				{
-					"bind": "/portainer/Music",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/music",
 					"container": "/music"
 				}
 			]
@@ -335,7 +335,7 @@
 				}
 			],
 			"image": "linuxserver/heimdall:latest",
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/heimdall-icon.png",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/heimdall-icon.png",
 			"name": "heimdall",
 			"platform": "linux",
 			"ports": [
@@ -347,7 +347,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Heimdall",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/heimdall",
 					"container": "/config"
 				}
 			]
@@ -359,7 +359,7 @@
 			],
 			"description": "A dead simple static HOMepage for your servER to keep your s ervices on hand, from a simple yaml configuration file.",
 			"image": "b4bz/homer:latest",
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/homer.png",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/homer.png",
 			"name": "homer",
 			"note": "This container requires a yml file within the config volume. See the documentation here https://github.com/bastienwirtz/homer",
 			"platform": "linux",
@@ -371,11 +371,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Homer/assets",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/homer/assets",
 					"container": "/www/assets"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Config/Homer",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/homer",
 					"container": "/www/config.yml"
 				}
 			]
@@ -387,7 +387,7 @@
 			],
 			"description": "Create agents that monitor and act on your behalf.",
 			"image": "huginn/huginn:latest",
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/huginn.png",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/huginn.png",
 			"name": "huginn",
 			"platform": "linux",
 			"ports": [
@@ -398,7 +398,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/huginn",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/huginn",
 					"container": "/var/lib/mysql"
 				}
 			]
@@ -439,13 +439,13 @@
 					"name": "PORT"
 				}
 			],
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/invoice_ninja.png",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/invoice_ninja.png",
 			"name": "invoice_ninja",
 			"note": "The database user is invoice_ninja and the database is ninja_db. Please generate an app key following the documentation \u003ca href='https://github.com/invoiceninja/dockerfiles'\u003ehere\u003c/a\u003e. ",
 			"platform": "linux",
 			"repository": {
-				"stackfile": "Template/Stack/invoice-ninja.yml",
-				"url": "https://github.com/SelfhostedPro/selfhosted_templates"
+				"stackfile": "template/stack/invoice-ninja.yml",
+				"url": "https://github.com/X015/portainer-2.0-omv-template"
 			},
 			"title": "Invoice Ninja",
 			"type": 3
@@ -469,7 +469,7 @@
 				}
 			],
 			"image": "linuxserver/jackett:latest",
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/jacket-icon.png",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/jacket-icon.png",
 			"name": "jackett",
 			"platform": "linux",
 			"ports": [
@@ -480,11 +480,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Jackett",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/jackett",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/Downloads",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/downloads",
 					"container": "/downloads"
 				}
 			]
@@ -513,7 +513,7 @@
 				}
 			],
 			"image": "linuxserver/jellyfin:latest",
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/jellyfin.png",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/jellyfin.png",
 			"name": "jellyfin",
 			"platform": "linux",
 			"ports": [
@@ -525,15 +525,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Jelllyfin",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/jelllyfin",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/TV",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/tv",
 					"container": "/data/tvshows"
 				},
 				{
-					"bind": "/portainer/Movies",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/movies",
 					"container": "/data/movies"
 				}
 			]
@@ -556,7 +556,7 @@
 				}
 			],
 			"image": "linuxserver/kodi-headless:latest",
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/kodi-icon.png",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/kodi-icon.png",
 			"name": "kodi-headless",
 			"platform": "linux",
 			"ports": [
@@ -568,7 +568,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Kodi",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/kodi-headless",
 					"container": "/config"
 				}
 			]
@@ -591,7 +591,7 @@
 				}
 			],
 			"image": "linuxserver/lazylibrarian:latest",
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/lazylibrarian-icon.png",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template//master/Images/lazylibrarian-icon.png",
 			"name": "lazylibrarian",
 			"platform": "linux",
 			"ports": [
@@ -602,12 +602,15 @@
 			"type": 1,
 			"volumes": [
 				{
+                    "bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/lazylibrarian",
 					"container": "/config"
 				},
 				{
+                    "bind": "/srv/dev-disk-by-id-md-name-Nexus-0/downloads",
 					"container": "/downloads"
 				},
 				{
+                    "bind": "/srv/dev-disk-by-id-md-name-Nexus-0/books",
 					"container": "/books"
 				}
 			]
@@ -666,7 +669,7 @@
 				}
 			],
 			"image": "linuxserver/letsencrypt:latest",
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/letsencrypt.png",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/letsencrypt.png",
 			"name": "letsencrypt",
 			"platform": "linux",
 			"ports": [
@@ -678,7 +681,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/LetsEncrypt",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/letsencrypt",
 					"container": "/config"
 				}
 			]
@@ -690,7 +693,7 @@
 			],
 			"description": "A Free and Open Source Speedtest for HTML5 and more.",
 			"image": "linuxserver/librespeed:latest",
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/speedtest.png",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/speedtest.png",
 			"name": "librespeed",
 			"platform": "linux",
 			"ports": [
@@ -701,7 +704,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/LibreSpeed",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/librespeed",
 					"container": "/config"
 				}
 			]
@@ -727,7 +730,7 @@
 				}
 			],
 			"image": "linuxserver/lychee:latest",
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/lychee-icon.png",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/lychee-icon.png",
 			"name": "lychee",
 			"platform": "linux",
 			"ports": [
@@ -738,11 +741,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Lychee",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/lychee",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/Pictures",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/privat/fotos",
 					"container": "/pictures"
 				}
 			]
@@ -771,7 +774,7 @@
 				}
 			],
 			"image": "linuxserver/mariadb:latest",
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/mariadb-icon.png",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/mariadb-icon.png",
 			"name": "mariadb",
 			"platform": "linux",
 			"ports": [
@@ -782,7 +785,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Mariadb",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/mariadb",
 					"container": "/config"
 				}
 			]
@@ -805,7 +808,7 @@
 				}
 			],
 			"image": "linuxserver/mcmyadmin2:latest",
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/mcmyadmin-icon.png",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/mcmyadmin-icon.png",
 			"name": "mcmyadmin2",
 			"platform": "linux",
 			"ports": [
@@ -840,7 +843,7 @@
 				}
 			],
 			"image": "linuxserver/medusa:latest",
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/medusa-icon.png",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/medusa-icon.png",
 			"name": "medusa",
 			"platform": "linux",
 			"ports": [
@@ -851,15 +854,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Medusa",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/medusa",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/TV",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/tv",
 					"container": "/tv"
 				},
 				{
-					"bind": "/portainer/Downloads",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/downloads",
 					"container": "/downloads"
 				}
 			]
@@ -882,7 +885,7 @@
 				}
 			],
 			"image": "linuxserver/minetest:latest",
-			"logo": "https://raw.githubusercontent.com/linuxserver/beta-templates/master/lsiodev/img/minetest-icon.png",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/minetest-icon.png",
 			"name": "minetest",
 			"platform": "linux",
 			"ports": [
@@ -917,7 +920,7 @@
 				}
 			],
 			"image": "linuxserver/minisatip:latest",
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/minisatip-icon.png",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/minisatip-icon.png",
 			"name": "minisatip",
 			"platform": "linux",
 			"ports": [
@@ -936,7 +939,7 @@
 			],
 			"description": "Mstream is a personal music streaming server. You can use mStream to stream your music from your home computer to any device, anywhere. There are mobile apps available for both Android and iPhone..",
 			"image": "linuxserver/mstream:latest",
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/mstream.png",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/mstream.png",
 			"name": "mstream",
 			"platform": "linux",
 			"ports": [
@@ -947,11 +950,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Mstream",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/mstream",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/Downloads",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/music",
 					"container": "/music"
 				}
 			]
@@ -980,7 +983,7 @@
 				}
 			],
 			"image": "goofball222/murmur:latest",
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/Mumble-logo.png",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/Mumble-logo.png",
 			"name": "murmur",
 			"platform": "linux",
 			"ports": [
@@ -996,15 +999,15 @@
 					"container": "/etc/localtime"
 				},
 				{
-					"bind": "/portainer/Files/Config/Murmur",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/murmur",
 					"container": "/opt/murmur/config"
 				},
 				{
-					"bind": "/portainer/Files/Murmur/data",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/murmur/data",
 					"container": "/opt/murmur/data"
 				},
 				{
-					"bind": "/portainer/Files/Murmur/log",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/murmur/log",
 					"container": "/opt/murmur/log"
 				}
 			]
@@ -1034,7 +1037,7 @@
 				}
 			],
 			"image": "linuxserver/musicbrainz:latest",
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/musicbrainz-icon.png",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/musicbrainz-icon.png",
 			"name": "musicbrainz",
 			"platform": "linux",
 			"ports": [
@@ -1045,11 +1048,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/MusicBrainz",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/musicbrainz",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/Files/AppData/MusicBrainz",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/musicbrainz/data",
 					"container": "/data"
 				}
 			]
@@ -1075,7 +1078,7 @@
 				}
 			],
 			"image": "linuxserver/muximux:latest",
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/muximux-icon.png",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/muximux-icon.png",
 			"name": "muximux",
 			"platform": "linux",
 			"ports": [
@@ -1086,7 +1089,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Muximux",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/muximux",
 					"container": "/config"
 				}
 			]
@@ -1110,7 +1113,7 @@
 				}
 			],
 			"image": "linuxserver/mylar:latest",
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/mylar-icon.png",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/mylar-icon.png",
 			"name": "mylar",
 			"platform": "linux",
 			"ports": [
@@ -1121,15 +1124,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Mylar",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/mylar",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/Downloads",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/downloads",
 					"container": "/downloads"
 				},
 				{
-					"bind": "/portainer/Comics",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/comics",
 					"container": "/comics"
 				}
 			]
@@ -1171,13 +1174,13 @@
 					"name": "PORT"
 				}
 			],
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/nextcloud-icon.png",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/nextcloud-icon.png",
 			"name": "nextcloud",
 			"note": "The database user is nextcloud and the database is nextcloud_db. The host of the database will be located at the bottom of the DB conotainer in portainer.",
 			"platform": "linux",
 			"repository": {
-				"stackfile": "Template/Stack/nextcloud.yml",
-				"url": "https://github.com/SelfhostedPro/selfhosted_templates"
+				"stackfile": "template/stack/nextcloud.yml",
+				"url": "https://github.com/X015/portainer-2.0-omv-template"
 			},
 			"title": "Nextcloud",
 			"type": 3
@@ -1201,7 +1204,7 @@
 				}
 			],
 			"image": "linuxserver/nginx:latest",
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/nginx-icon.png",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/nginx-icon.png",
 			"name": "nginx",
 			"platform": "linux",
 			"ports": [
@@ -1213,7 +1216,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Nginx",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/nginx",
 					"container": "/config"
 				}
 			]
@@ -1225,7 +1228,7 @@
 			],
 			"description": "Nginx Proxy Manager enables you to easily forward to your websites running at home or otherwise, including free SSL, without having to know too much about Nginx or Letsencrypt.",
 			"image": "jlesage/nginx-proxy-manager",
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/proxy_mgr.png",
+			"logo": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/master/Images/proxy_mgr.png",
 			"name": "nginx-proxy-manager",
 			"platform": "linux",
 			"ports": [
@@ -1238,7 +1241,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Nginx-Proxy",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/nginx-proxy",
 					"container": "/config"
 				}
 			]
@@ -1261,7 +1264,7 @@
 				}
 			],
 			"image": "linuxserver/nzbget:latest",
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/nzbget-icon.png",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/nzbget-icon.png",
 			"name": "nzbget",
 			"platform": "linux",
 			"ports": [
@@ -1272,11 +1275,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Nzbget",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/nzbget",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/Downloads",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/downloads",
 					"container": "/downloads"
 				}
 			]
@@ -1301,7 +1304,7 @@
 				}
 			],
 			"image": "linuxserver/nzbhydra2:latest",
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/hydra-icon.png",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/hydra-icon.png",
 			"name": "nzbhydra2",
 			"platform": "linux",
 			"ports": [
@@ -1312,11 +1315,11 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Nzbhydra2",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/nzbhydra2",
 					"container": "/config"
 				},
 				{
-					"bind": "/portainer/Downloads",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/downloads",
 					"container": "/downloads"
 				}
 			]
@@ -1342,7 +1345,7 @@
 				}
 			],
 			"image": "linuxserver/ombi:latest",
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/ombi.png",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/ombi.png",
 			"name": "ombi",
 			"platform": "linux",
 			"ports": [
@@ -1353,7 +1356,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Ombi",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/ombi",
 					"container": "/config"
 				}
 			]
@@ -1381,7 +1384,7 @@
 				}
 			],
 			"image": "linuxserver/openvpn-as:latest",
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/openvpn-as-icon.png",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/openvpn-as-icon.png",
 			"name": "openvpn-as",
 			"platform": "linux",
 			"ports": [
@@ -1394,7 +1397,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/OpenVPN-AS",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/openvpn-as",
 					"container": "/config"
 				}
 			]
@@ -1418,7 +1421,7 @@
 				}
 			],
 			"image": "organizrtools/organizr-v2:php-fpm",
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/organizr-icon.png",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/organizr-icon.png",
 			"name": "organizr-v2",
 			"platform": "linux",
 			"ports": [
@@ -1429,7 +1432,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Organizr",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/organizr",
 					"container": "/config"
 				}
 			]
@@ -1452,7 +1455,7 @@
 				}
 			],
 			"image": "linuxserver/oscam:latest",
-			"logo": "http://i.imgur.com/8LadrLg.png",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/os-cam-logo.png",
 			"name": "oscam",
 			"platform": "linux",
 			"ports": [
@@ -1464,7 +1467,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/OScam",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/oscam",
 					"container": "/config"
 				}
 			]
@@ -1487,7 +1490,7 @@
 				}
 			],
 			"image": "linuxserver/photoshow:latest",
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/photoshow-icon.png",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/photoshow-icon.png",
 			"name": "photoshow",
 			"platform": "linux",
 			"ports": [
@@ -1498,15 +1501,15 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Pictures",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/privat/fotos",
 					"container": "/Pictures"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Photoshow/Thumbs",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/photoshow/thumbs",
 					"container": "/Thumbs"
 				},
 				{
-					"bind": "/portainer/Files/AppData/Config/PhotoShow",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/photoshow",
 					"container": "/config"
 				}
 			]
@@ -1518,7 +1521,7 @@
 			],
 			"description": "Self-hosted snippet manager.",
 			"image": "snowmean/snibox-sqlite:latest",
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/snibox.png",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/snibox.png",
 			"name": "snibox",
 			"note": "Label-oriented interface with search. Supports various programming languages, markdown, plain text.",
 			"platform": "linux",
@@ -1530,7 +1533,7 @@
 			"type": 1,
 			"volumes": [
 				{
-					"bind": "/portainer/Files/AppData/Config/Snibox",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/snibox",
 					"container": "/app/db/database"
 				}
 			]
@@ -1568,12 +1571,12 @@
 					"name": "PORT"
 				}
 			],
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/bookstack2.png",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/bookstack2.png",
 			"note": "Default login is admin@admin.com with a password of password. The database created is called bookstackapp and the database user is called bookstack",
 			"platform": "linux",
 			"repository": {
-				"stackfile": "Template/Stack/bookstack.yml",
-				"url": "https://github.com/SelfhostedPro/selfhosted_templates"
+				"stackfile": "template/stack/bookstack.yml",
+				"url": "https://github.com/X015/portainer-2.0-omv-template"
 			},
 			"title": "Bookstack",
 			"type": 3
@@ -2740,8 +2743,8 @@
 			"note": "Documentation on this containier can be found here: \u003ca href=https://hub.docker.com/r/goofball222/pritunl\u003ehttps://hub.docker.com/r/goofball222/pritunl\u003c/a\u003e",
 			"platform": "linux",
 			"repository": {
-				"stackfile": "Template/Stack/pritunl.yml",
-				"url": "https://github.com/SelfhostedPro/selfhosted_templates"
+				"stackfile": "template/stack/pritunl.yml",
+				"url": "https://github.com/X015/portainer-2.0-omv-template"
 			},
 			"title": "Pritunl",
 			"type": 3
