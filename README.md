@@ -1,5 +1,4 @@
-# portainer-2.0-omv-template
-Portainer 2.0 Application Template
+# Portainer 2.0 Application Template for Docker
 
 # Instructions
 
