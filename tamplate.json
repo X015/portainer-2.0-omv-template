@@ -3826,7 +3826,7 @@
 				}
 			],
 			"image": "pducharme/unifi-video-controller:latest",
-			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/UniFiVideo-logo.png",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/master/Images/unifi-video-logo.png",
 			"name": "UniFi Video",
 			"platform": "linux",
 			"ports": [
