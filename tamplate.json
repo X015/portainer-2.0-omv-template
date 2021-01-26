@@ -3959,7 +3959,7 @@
 				"default": "100"
 			  }
 			]
-		  },
+		},
 		  {
 			"type": 3,
 			"title": "Seafile",
@@ -3972,7 +3972,7 @@
 			],
 			"platform": "linux",
 			"repository": {
-			  "url": "https://github.com/SelfhostedPro/selfhosted_templates",
+			  "url": "https://github.com/SelfhostedPro/selfhosted_templates"
 			  "stackfile": "Template/Stack/seafile.yml"
 			},
 			"env": [
