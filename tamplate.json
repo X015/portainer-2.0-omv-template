@@ -3936,7 +3936,7 @@
 			"title": "GOPHISH",
 			"name": "gophish",
 			"description": "NOTE: Once you deploy your GoPhish instance, please navigate to the logs section in Portainer and acquire your 'admin' credentials for login. Gophish is an open-source phishing toolkit designed for businesses and penetration testers. It provides the ability to quickly and easily setup and execute phishing engagements and security awareness training.",
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/gophish.png",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/beta/Images/go-phish-logo.png",
 			"image": "gophish/gophish:latest",
 			"categories": [
 			  "Other",
@@ -3959,6 +3959,32 @@
 				"default": "100"
 			  }
 			]
-		  }
+		  },
+		  {
+			"type": 3,
+			"title": "Seafile",
+			"name": "seafile",
+			"description": "Seafile is an open-source, cross-platform file-hosting software system. Files are stored on a central server and can be synchronized with personal computers and mobile devices through apps. Files on the Seafile server can also be accessed directly via the server's web interface.",
+			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/seafile.png",
+			"categories": [
+			  "Cloud",
+			  "Other"
+			],
+			"platform": "linux",
+			"repository": {
+			  "url": "https://github.com/SelfhostedPro/selfhosted_templates",
+			  "stackfile": "Template/Stack/seafile.yml"
+			},
+			"env": [
+			  {
+				"name": "TIME_ZONE",
+				"label": "Time Zone",
+				"default": "Etc/UTC"
+			  },
+			  {
+				"name": "MYSQL_ROOT_PASSWORD",
+				"label": "Database Password",
+				"default": "password"
+			  }
 	]
 }
