@@ -3959,21 +3959,7 @@
 				"default": "100"
 			  }
 			]
-		},
-		  {
-					"default": "MULLVAD",
-					"description": "see https://github.com/sgtsquiggs/docker-deluge-openvpn",
-					"label": "OPENVPN_PROVIDER",
-					"name": "OPENVPN_PROVIDER"
-				},
-				{
-					"label": "OPENVPN_USERNAME",
-					"name": "OPENVPN_USERNAME"
-				},
-				{
-					"label": "OPENVPN_PASSWORD",
-					"name": "OPENVPN_PASSWORD"
-				}
+		}
 			],
 			"platform": "linux",
 			"repository": {
