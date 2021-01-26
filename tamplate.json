@@ -602,15 +602,15 @@
 			"type": 1,
 			"volumes": [
 				{
-                    "bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/lazylibrarian",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/lazylibrarian",
 					"container": "/config"
 				},
 				{
-                    "bind": "/srv/dev-disk-by-id-md-name-Nexus-0/downloads",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/downloads",
 					"container": "/downloads"
 				},
 				{
-                    "bind": "/srv/dev-disk-by-id-md-name-Nexus-0/books",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/books",
 					"container": "/books"
 				}
 			]
@@ -3853,7 +3853,7 @@
 					"container": "/config"
 				}
 			]
-    },
+		},
 		{
 			"categories": [
 				"Other",
@@ -3939,106 +3939,108 @@
 			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/beta/Images/go-phish-logo.png",
 			"image": "gophish/gophish:latest",
 			"categories": [
-			  "Other",
-			  "Tools"
+				"Other",
+				"Tools"
 			],
 			"platform": "linux",
 			"restart_policy": "unless-stopped",
 			"ports": [
-			  "3333:3333/tcp"
+				"3333:3333/tcp"
 			],
 			"env": [
-			  {
-				"name": "PUID",
-				"label": "PUID",
-				"default": "1000"
-			  },
-			  {
-				"name": "PGID",
-				"label": "PGID",
-				"default": "100"
-			  }
+				{
+					"name": "PUID",
+					"label": "PUID",
+					"default": "1000"
+				},
+				{
+					"name": "PGID",
+					"label": "PGID",
+					"default": "100"
+				}
 			]
 		},
-		   {
+		{
 			"type": 3,
 			"title": "Seafile",
 			"name": "seafile",
 			"description": "Seafile is an open-source, cross-platform file-hosting software system. Files are stored on a central server and can be synchronized with personal computers and mobile devices through apps. Files on the Seafile server can also be accessed directly via the server's web interface.",
 			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/seafile.png",
 			"categories": [
-			  "Cloud",
-			  "Other"
+				"Cloud",
+				"Other"
 			],
 			"platform": "linux",
 			"repository": {
-			  "url": "https://github.com/SelfhostedPro/selfhosted_templates",
-			  "stackfile": "template/stack/seafile.yml"
+				"url": "https://github.com/SelfhostedPro/selfhosted_templates",
+				"stackfile": "template/stack/seafile.yml"
 			},
 			"env": [
-			  {
-				"name": "TIME_ZONE",
-				"label": "Time Zone",
-				"default": "Etc/UTC"
-			  },
-			  {
-				"name": "MYSQL_ROOT_PASSWORD",
-				"label": "Database Password",
-				"default": "password"
-			  },
-			{
-			  "name": "ADMIN_EMAIL",
-			  "label": "Administrator Email",
-			  "default": "me@example.com"
-			},
-			{
-			  "name": "ADMIN_PASSWORD",
-			  "label": "Administrator Password",
-			  "default": "asecret"
-			},
-			{
-			  "name": "SERVER_HOSTNAME",
-			  "label": "Domain Name",
-			  "default": "docs.seafile.com"
-			},
-			{
-			  "name": "ENABLE_HTTPS",
-			  "label": "Enable HTTPS?",
-			  "select": [
 				{
-				  "text": "Yes",
-				  "value": "true",
-				  "default": true
+					"name": "TIME_ZONE",
+					"label": "Time Zone",
+					"default": "Etc/UTC"
 				},
 				{
-				  "text": "No",
-				  "value": "false"
+					"name": "MYSQL_ROOT_PASSWORD",
+					"label": "Database Password",
+					"default": "password"
+				},
+				{
+					"name": "ADMIN_EMAIL",
+					"label": "Administrator Email",
+					"default": "me@example.com"
+				},
+				{
+					"name": "ADMIN_PASSWORD",
+					"label": "Administrator Password",
+					"default": "asecret"
+				},
+				{
+					"name": "SERVER_HOSTNAME",
+					"label": "Domain Name",
+					"default": "docs.seafile.com"
+				},
+				{
+					"name": "ENABLE_HTTPS",
+					"label": "Enable HTTPS?",
+					"select": [
+						{
+							"text": "Yes",
+							"value": "true",
+							"default": true
+						},
+						{
+							"text": "No",
+							"value": "false"
+						}
+					]
+				  }
+				]
+			  },
+				{
+					"type": 1,
+					"title": "Dozzle",
+					"name": "dozzle",
+					"description": "Dozzle is a simple, lightweight application that provides you with a web based interface to monitor your Docker container logs live. It doesn’t store log information, it is for live monitoring of your container logs only.",
+					"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/dozzle.png",
+					"image": "amir20/dozzle:latest",
+					"categories": [
+						"Other",
+						"Tools",
+						"Maintenance"
+					],
+					"platform": "linux",
+					"restart_policy": "unless-stopped",
+					"ports": [
+						"8080:8080/tcp"
+					],
+					"volumes": [
+						{
+							"container": "/var/run/docker.sock",
+							"bind": "/var/run/docker.sock"
+						}
+					]
 				}
 			]
-	  	},
-		  {
-			"type": 1,
-			"title": "Dozzle",
-			"name": "dozzle",
-			"description": "Dozzle is a simple, lightweight application that provides you with a web based interface to monitor your Docker container logs live. It doesn’t store log information, it is for live monitoring of your container logs only.",
-			"logo": "https://raw.githubusercontent.com/SelfhostedPro/selfhosted_templates/master/Images/dozzle.png",
-			"image": "amir20/dozzle:latest",
-			"categories": [
-			  "Other",
-			  "Tools",
-			  "Maintenance"
-			],
-			"platform": "linux",
-			"restart_policy": "unless-stopped",
-			"ports": [
-			  "8080:8080/tcp"
-			],
-			"volumes": [
-			  {
-				"container": "/var/run/docker.sock",
-				"bind": "/var/run/docker.sock"
-			  }
-			]
-		}
-	]
-}
+		}		
