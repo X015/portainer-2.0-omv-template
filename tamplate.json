@@ -602,15 +602,15 @@
 			"type": 1,
 			"volumes": [
 				{
-                    "bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/lazylibrarian",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/lazylibrarian",
 					"container": "/config"
 				},
 				{
-                    "bind": "/srv/dev-disk-by-id-md-name-Nexus-0/downloads",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/downloads",
 					"container": "/downloads"
 				},
 				{
-                    "bind": "/srv/dev-disk-by-id-md-name-Nexus-0/books",
+					"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/books",
 					"container": "/books"
 				}
 			]
@@ -620,7 +620,7 @@
 				"Tools",
 				"Web"
 			],
-			"description": "This container sets up an Nginx webserver and reverse proxy with php support and a built-in letsencrypt client that automates free SSL server certificate generation and renewal processes. It also contains fail2ban for intrusion prevention.\r\n  \r\n  Before running this container, make sure that the url and subdomains are properly forwarded to this container's host.\r\n  \r\n  - Port 443 on the internet side of the router should be forwarded to this container's port 443.\r\n  - If you need a dynamic dns provider, you can use the free provider duckdns.org where the url will be yoursubdomain.duckdns.org and the subdomains    can be www,ftp,cloud\r\n  - The container detects changes to url and subdomains, revokes existing certs and generates new ones during start. \r\n  - It also detects changes to the DHLEVEL parameter and replaces the dhparams file.\r\n  \r\n  - If you'd like to password protect your sites, you can use htpasswd. Run the following command on your host to generate the htpasswd file docker exec -it letsencrypt htpasswd -c /config/nginx/.htpasswd \u0026lt;username\u0026gt;",
+			"description": "This container sets up an Nginx webserver and reverse proxy with php support and a built-in letsencrypt client that automates free SSL server certificate generation and renewal processes. It also contains fail2ban for intrusion prevention.",
 			"env": [
 				{
 					"label": "EMAIL",
@@ -3853,7 +3853,7 @@
 					"container": "/config"
 				}
 			]
-    },
+		},
 		{
 			"categories": [
 				"Other",
@@ -3939,58 +3939,247 @@
 			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/beta/Images/go-phish-logo.png",
 			"image": "gophish/gophish:latest",
 			"categories": [
-			  "Other",
-			  "Tools"
+				"Other",
+				"Tools"
 			],
 			"platform": "linux",
 			"restart_policy": "unless-stopped",
 			"ports": [
-			  "3333:3333/tcp"
+				"3333:3333/tcp"
 			],
 			"env": [
-			  {
-				"name": "PUID",
-				"label": "PUID",
-				"default": "1000"
-			  },
-			  {
-				"name": "PGID",
-				"label": "PGID",
-				"default": "100"
-			  }
+				{
+					"name": "PUID",
+					"label": "PUID",
+					"default": "1000"
+				},
+				{
+					"name": "PGID",
+					"label": "PGID",
+					"default": "100"
+				}
 			]
 		},
-		  {
-					"default": "MULLVAD",
-					"description": "see https://github.com/sgtsquiggs/docker-deluge-openvpn",
-					"label": "OPENVPN_PROVIDER",
-					"name": "OPENVPN_PROVIDER"
-				},
-				{
-					"label": "OPENVPN_USERNAME",
-					"name": "OPENVPN_USERNAME"
-				},
-				{
-					"label": "OPENVPN_PASSWORD",
-					"name": "OPENVPN_PASSWORD"
-				}
+		{
+			"type": 3,
+			"title": "Seafile",
+			"name": "seafile",
+			"description": "Seafile is an open-source, cross-platform file-hosting software system. Files are stored on a central server and can be synchronized with personal computers and mobile devices through apps. Files on the Seafile server can also be accessed directly via the server's web interface.",
+			"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/beta/Images/seafile-logo.png",
+			"categories": [
+				"Cloud",
+				"Other"
 			],
-
 			"platform": "linux",
 			"repository": {
-			  "url": "https://github.com/SelfhostedPro/selfhosted_templates",
-			  "stackfile": "template/stack/seafile.yml"
+				"url": "https://github.com/X015/portainer-2.0-omv-template/tree/beta",
+				"stackfile": "template/stack/seafile.yml"
 			},
 			"env": [
-			  {
-				"name": "TIME_ZONE",
-				"label": "Time Zone",
-				"default": "Etc/UTC"
+				{
+					"name": "TIME_ZONE",
+					"label": "Time Zone",
+					"default": "Etc/UTC"
+				},
+				{
+					"name": "MYSQL_ROOT_PASSWORD",
+					"label": "Database Password",
+					"default": "password"
+				},
+				{
+					"name": "ADMIN_EMAIL",
+					"label": "Administrator Email",
+					"default": "me@example.com"
+				},
+				{
+					"name": "ADMIN_PASSWORD",
+					"label": "Administrator Password",
+					"default": "asecret"
+				},
+				{
+					"name": "SERVER_HOSTNAME",
+					"label": "Domain Name",
+					"default": "docs.seafile.com"
+				},
+				{
+					"name": "ENABLE_HTTPS",
+					"label": "Enable HTTPS?",
+					"select": [
+						{
+							"text": "Yes",
+							"value": "true",
+							"default": true
+						},
+						{
+							"text": "No",
+							"value": "false"
+						}
+					]
+				  }
+				]
 			  },
-			  {
-				"name": "MYSQL_ROOT_PASSWORD",
-				"label": "Database Password",
-				"default": "password"
-			  }
-		]	
-}
+				{
+					"type": 1,
+					"title": "Dozzle",
+					"name": "dozzle",
+					"description": "Dozzle is a simple, lightweight application that provides you with a web based interface to monitor your Docker container logs live. It doesn’t store log information, it is for live monitoring of your container logs only.",
+					"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/beta/Images/dozzle-logo.png",
+					"image": "amir20/dozzle:latest",
+					"categories": [
+						"Other",
+						"Tools",
+						"Maintenance"
+					],
+					"platform": "linux",
+					"restart_policy": "unless-stopped",
+					"ports": [
+						"8080:8080/tcp"
+					],
+					"volumes": [
+						{
+							"container": "/var/run/docker.sock",
+							"bind": "/var/run/docker.sock"
+						}
+					]
+				},
+				{
+					"type": 1,
+					"title": "Wallbag",
+					"name": "wallabag",
+					"description": "wallabag is a self hostable application for saving web pages: Save and classify articles. Read them later. Freely.",
+					"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/beta/Images/wallabag-logo.png",
+					"image": "wallabag/wallabag:latest",
+					"categories": [
+					  "Tools",
+					  "Productivity",
+					  "Web",
+					  "Other"
+					],
+					"platform": "linux",
+					"restart_policy": "unless-stopped",
+					"volumes": [
+					  {
+						"container": "/var/www/wallabag/data",
+						"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/wallabag/data"
+					  },
+					  {
+						"container": "/var/www/wallabag/web/assets/images",
+						"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/wallabag/images"
+					  }
+					],
+					"ports": [
+					  "80:80/tcp"
+					],
+					"env": [
+					  {
+						"name": "SYMFONY__ENV__SECRET",
+						"label": "Secret",
+						"default": "2QFvBsTsyknKBPaoMQDabJ1qQCzbAwbD",
+						"description": "This should be set to a random string of characters."
+					  },
+					  {
+						"name": "SYMFONY__ENV__DOMAIN_NAME",
+						"label": "Domain Name",
+						"default": "https://wallabag.pavlo-net.eu"
+					  },
+					  {
+						"name": "SYMFONY__ENV__MAILER_HOST",
+						"label": "SMTP Host",
+						"default": "127.0.0.1"
+					  },
+					  {
+						"name": "SYMFONY__ENV__MAILER_USER",
+						"label": "SMTP Username",
+						"default": "~"
+					  },
+					  {
+						"name": "SYMFONY__ENV__MAILER_PASSWORD",
+						"label": "SMTP Password",
+						"default": "~"
+					  },
+					  {
+						"name": "SYMFONY__ENV__FROM_EMAIL",
+						"label": "SMTP From Email",
+						"default": "wallabag@example.com"
+					  },
+					  {
+						"name": "SYMFONY__ENV__FOSUSER_REGISTRATION",
+						"label": "Enable public user registration?",
+						"select": [
+						  {
+							"text": "Yes",
+							"value": "true",
+							"default": true
+						  },
+						  {
+							"text": "No",
+							"value": "false"
+						  }
+						]
+					  },
+					  {
+						"name": "SYMFONY__ENV__FOSUSER_CONFIRMATION",
+						"label": "Require registration confirmation?",
+						"select": [
+						  {
+							"text": "Yes",
+							"value": "true",
+							"default": true
+						  },
+						  {
+							"text": "No",
+							"value": "false"
+						  }
+						]
+					  }
+					]
+				},
+				{
+					"type": 1,
+					"title": "DDClient",
+					"name": "ddclient",
+					"description": "DDClient is a Perl client used to update dynamic DNS entries for accounts on Dynamic DNS Network Service Provider. It was originally written by Paul Burry and is now mostly by wimpunk. It has the capability to update more than just dyndns and it can fetch your WAN-ipaddress in a few different ways.",
+					"logo": "https://raw.githubusercontent.com/X015/portainer-2.0-omv-template/beta/Images/ddclient-logo.png",
+					"image": "linuxserver/ddclient:latest",
+					"categories": [
+					  "Other",
+					  "Utilities"
+					],
+					"platform": "linux",
+					"restart_policy": "unless-stopped",
+					"volumes": [
+						{
+						"container": "/config",
+						"bind": "/srv/dev-disk-by-id-md-name-Nexus-0/appdata/ddclient/"
+						}
+					  ],
+					"env": [
+					  {
+						"name": "PUID",
+						"label": "PUID",
+						"default": "1000"
+					  },
+					  {
+						"name": "PGID",
+						"label": "PGID",
+						"default": "100"
+					  },
+					  {
+						"name": "CONTEXT_PATH",
+						"label": "CONTEXT_PATH",
+						"set": "ddclient"
+					  },
+					  {
+						"name": "JAVA_OPTS",
+						"label": "JAVA_OPTS",
+						"set": "-Xms256m -Xmx512m"
+					  },
+					  {
+						"name": "TZ",
+						"label": "TZ"
+					  }
+					]
+				  }
+
+			]
+		}		
